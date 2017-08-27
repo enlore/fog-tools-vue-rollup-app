@@ -6,13 +6,14 @@ import buble from 'rollup-plugin-buble'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import nodeGlobals from 'rollup-plugin-node-globals'
+import replace from 'rollup-plugin-replace'
 
 import butternut from 'rollup-plugin-butternut'
 import livereload from 'rollup-plugin-livereload'
 import serve from 'rollup-plugin-serve'
 
-import re from 'rollup-plugin-re'
-import gitVersion from 'rollup-plugin-git-version'
+//import re from 'rollup-plugin-re'
+//import gitVersion from 'rollup-plugin-git-version'
 
 const plugins = [
     alias({
@@ -29,10 +30,10 @@ const plugins = [
         main: true,
         browser: true
     }),
-    replace({
+    //replace({
         //include: 'minimatch or array of minimatch (all files processed if omitted)',
         //exclude: 'same deal',
-        patterns: [
+        //patterns: [
             //{
             ////include: 'include & exclude available for rule scope also',
             ////exclude: '',
@@ -44,12 +45,12 @@ const plugins = [
             ////transform: (code, id) {} // return value is replacement
             //},
 
-        ],
+        //],
         //defines: {},
-        replaces: {
-            $API_ENDPOINT: "api-endpoint"
-        },
-    }),
+        //replaces: {
+            //$API_ENDPOINT: "api-endpoint"
+        //},
+    //}),
     commonjs(),
     nodeGlobals()
 ]
