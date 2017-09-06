@@ -6,7 +6,7 @@ import buble from 'rollup-plugin-buble'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import nodeGlobals from 'rollup-plugin-node-globals'
-import replace from 'rollup-plugin-replace'
+//import replace from 'rollup-plugin-replace'
 
 import butternut from 'rollup-plugin-butternut'
 import livereload from 'rollup-plugin-livereload'
