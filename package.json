@@ -7,9 +7,11 @@
   "scripts": {
     "build": "run-s build:**",
     "build:js": "cross-env NODE_ENV=production rollup -c",
-    "build:autoprefixer": "postcss --use autoprefixer -o public/assets/css/app.css public/assets/css/app.css",
-    "build:cssnano": "cssnano public/assets/css/app.css public/assets/css/app.css",
-    "start:dev": "cross-env NODE_ENV=development rollup -cw"
+    "build:autoprefixer": "postcss --use autoprefixer -o dist/css/app.css dist/css/app.css",
+    "build:cssnano": "cssnano dist/css/app.css dist/css/app.css",
+    "start:dev": "run-p start:scss start:rollup",
+    "start:scss": "node-sass -rw src/scss -o dist/css",
+    "start:rollup": "cross-env NODE_ENV=development rollup -cw"
   },
   "dependencies": {
     "vue": "^2.4.4",
@@ -20,22 +22,23 @@
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.26.0",
     "cross-env": "^5.0.5",
+    "cssnano-cli": "^1.0.4",
+    "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
     "postcss-cli": "^4.1.1",
-    "rollup-plugin-commonjs": "^8.2.1",
-    "rollup-plugin-replace": "^1.2.1",
-    "rollup-plugin-vue": "^2.5.1",
-    "cssnano-cli": "^1.0.4",
     "rollup": "^0.41.4",
     "rollup-plugin-alias": "^1.3.1",
     "rollup-plugin-buble": "^0.15.0",
     "rollup-plugin-butternut": "^0.1.0",
+    "rollup-plugin-commonjs": "^8.2.1",
     "rollup-plugin-git-version": "^0.2.1",
     "rollup-plugin-livereload": "^0.4.0",
     "rollup-plugin-node-globals": "^1.1.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-re": "^1.0.6",
+    "rollup-plugin-replace": "^1.2.1",
     "rollup-plugin-serve": "^0.3.0",
+    "rollup-plugin-vue": "^2.5.1",
     "rollup-watch": "^3.2.2"
   }
 }
