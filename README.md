@@ -16,6 +16,11 @@ yarn run start:dev
 yarn run build
 ```
 
+## Notes
+
+Look at the `rollup.config.js` file to set up your search and replace vars,
+output config, etc.
+
 ## Reference
 
 - For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
