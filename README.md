@@ -4,28 +4,16 @@
 
 ## Build setup
 
-### [yarn](https://yarnpkg.com) - recommend
+### [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/)
 ``` bash
 # Install dependencies
 yarn install
 
 # Server with hot reload at localhost:8080
-yarn run dev
+yarn run start:dev
 
 # Build for production with minification
 yarn run build
-```
-
-### [npm](https://www.npmjs.com/)
-``` bash
-# Install dependencies
-npm install
-
-# Server with hot reload at localhost:8080
-npm run dev
-
-# Build for production with minification
-npm run build
 ```
 
 ## Reference
