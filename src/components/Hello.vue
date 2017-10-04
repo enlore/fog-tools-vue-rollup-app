@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="assets/images/logo.png">
+    <img src="/img/logo.png">
     <h1>{{ msg }}</h1>
 
     <select v-model="spoken">
