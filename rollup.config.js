@@ -20,7 +20,7 @@ const plugins = [
         vue$: 'vue/dist/vue.common.js'
     }),
     vue({
-        css: './public/assets/css/app.css'
+        css: './dist/assets/css/app.css'
     }),
     buble({
         objectAssign: 'Object.assign'
@@ -31,8 +31,8 @@ const plugins = [
         browser: true
     }),
     //replace({
-        //include: 'minimatch or array of minimatch (all files processed if omitted)',
-        //exclude: 'same deal',
+        //include: 'src/**/*.vue', // optional, all files processed if omitted
+        //exclude: 'src/**/scss', // same as above
         //patterns: [
             //{
             ////include: 'include & exclude available for rule scope also',
@@ -57,7 +57,7 @@ const plugins = [
 
 const config = {
     entry: './src/app.js',
-    dest: './public/assets/js/app.js',
+    dest: './dist/assets/js/app.js',
     format: 'umd',
     sourceMap: true,
     plugins: plugins
@@ -74,7 +74,7 @@ if (isProduction) {
 if (isDevelopment) {
     config.plugins.push(livereload())
     config.plugins.push(serve({
-        contentBase: './public/',
+        contentBase: './dist/',
         port: 8080,
         open: true
     }))
