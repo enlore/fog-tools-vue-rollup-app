@@ -20,7 +20,7 @@ const plugins = [
         vue$: 'vue/dist/vue.common.js'
     }),
     vue({
-        css: './dist/assets/css/app.css'
+        css: './dist/css/app.css'
     }),
     buble({
         objectAssign: 'Object.assign'
@@ -51,13 +51,13 @@ const plugins = [
             //$API_ENDPOINT: "api-endpoint"
         //},
     //}),
-    commonjs(),
+    commonjs(), // required to be able to import commonJS style modules (like node modules)
     nodeGlobals()
 ]
 
 const config = {
     entry: './src/app.js',
-    dest: './dist/assets/js/app.js',
+    dest: './dist/js/app.js',
     format: 'umd',
     sourceMap: true,
     plugins: plugins
