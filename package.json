@@ -9,7 +9,7 @@
     "build:js": "cross-env NODE_ENV=production rollup -c",
     "build:autoprefixer": "postcss --use autoprefixer -o public/assets/css/app.css public/assets/css/app.css",
     "build:cssnano": "cssnano public/assets/css/app.css public/assets/css/app.css",
-    "dev": "cross-env NODE_ENV=development rollup -cw"
+    "start:dev": "cross-env NODE_ENV=development rollup -cw"
   },
   "dependencies": {
     "autoprefixer": "^7.1.4",
